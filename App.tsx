@@ -4,6 +4,7 @@ import { StatusBar } from 'react-native';
 import { Home } from './src/screens/Home';
 import theme from './src/theme';
 import { Loading } from './src/components/Loading';
+import { RegisterFood } from './src/screens/RegisterFood';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
@@ -16,7 +17,7 @@ export default function App() {
         translucent
       />
 
-      {fontsLoaded ? <Home /> : <Loading /> }
+      {fontsLoaded ? <RegisterFood /> : <Loading /> }
     </ThemeProvider>
   );
 }  
