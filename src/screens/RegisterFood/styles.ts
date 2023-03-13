@@ -1,4 +1,4 @@
-import { Cookie, CookingPot, Hamburger } from "phosphor-react-native";
+import { Hamburger } from "phosphor-react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import styled, { css } from "styled-components/native";
 
@@ -11,7 +11,6 @@ export const Container = styled(SafeAreaView)`
 export const ContentContainer = styled.View`
   flex: 1;
   justify-content: center;
-  /* margin-top: -105px; */
 `;
 
 export const Input = styled.TextInput`
@@ -34,9 +33,10 @@ export const Input = styled.TextInput`
 
 export const FoodIcon = styled(Hamburger).attrs(({ theme }) => ({
   size: 72,
+  color: theme.COLORS.GRAY_700,
   weight: "bold"
 }))
 `
   align-self: center;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 `;
