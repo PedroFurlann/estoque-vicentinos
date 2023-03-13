@@ -16,7 +16,7 @@ export function RegisterFood() {
           placeholderTextColor={COLORS.GRAY_300}
         />
         <Input 
-          placeholder="Quantidade em Kg ou Unidade (pacotes)"
+          placeholder="Unidade de medida: Kg, Unidades (pacotes)"
           placeholderTextColor={COLORS.GRAY_300}
         />
         <Button title="Adicionar Alimento" />
