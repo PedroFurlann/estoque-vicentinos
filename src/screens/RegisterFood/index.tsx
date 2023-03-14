@@ -4,7 +4,7 @@ import { Header } from "../../components/Header";
 import { Container, ContentContainer, FoodIcon, Input } from "./styles";
 
 export function RegisterFood() {
-  const { COLORS, FONT_SIZE } = useTheme();
+  const { COLORS } = useTheme();
 
   return (
     <Container>
@@ -16,7 +16,7 @@ export function RegisterFood() {
           placeholderTextColor={COLORS.GRAY_300}
         />
         <Input 
-          placeholder="Unidade de medida: Kg, Unidades (pacotes)"
+          placeholder="Digite unidade de medida: (Kg ou Unid)"
           placeholderTextColor={COLORS.GRAY_300}
         />
         <Button title="Adicionar Alimento" />
