@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 import { Alert } from "react-native";
 import { Button } from "../../components/Button";
@@ -16,6 +17,8 @@ import {
 export function Food() {
   const [foodAmount, setFoodAmount] = useState(0);
 
+  const { navigate } = useNavigation();
+
   function handleAddOneOnFoodAmount() {
     setFoodAmount((state) => state + 1);
   }
@@ -29,6 +32,10 @@ export function Food() {
     }
 
     setFoodAmount((state) => state - 1);
+  }
+
+  function handleSaveChanges() {
+    navigate("home");
   }
 
   return (
@@ -54,7 +61,7 @@ export function Food() {
       </FoodAmountContainer>
 
       <ButtonContainer>
-        <Button title="Salvar" style={{ marginRight: 16 }} />
+        <Button title="Salvar" style={{ marginRight: 16 }} onPress={handleSaveChanges} />
         <Button title="Excluir alimento" type="SECONDARY" />
       </ButtonContainer>
     </Container>
