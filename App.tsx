@@ -5,6 +5,7 @@ import { Home } from './src/screens/Home';
 import theme from './src/theme';
 import { Loading } from './src/components/Loading';
 import { RegisterFood } from './src/screens/RegisterFood';
+import { Food } from './src/screens/Food';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
@@ -17,7 +18,7 @@ export default function App() {
         translucent
       />
 
-      {fontsLoaded ? <RegisterFood /> : <Loading /> }
+      {fontsLoaded ? <Food /> : <Loading /> }
     </ThemeProvider>
   );
 }  
