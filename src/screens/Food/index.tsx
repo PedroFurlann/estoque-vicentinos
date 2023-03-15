@@ -1,4 +1,4 @@
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { useState } from "react";
 import { Alert } from "react-native";
 import { Button } from "../../components/Button";
@@ -16,8 +16,17 @@ import {
   TextForExplainIconButton,
 } from "./styles";
 
+export interface RouteParams {
+  name: string;
+  measure: string;
+}
+
 export function Food() {
   const [foodAmount, setFoodAmount] = useState(0);
+
+  const route = useRoute();
+
+  const { name, measure } = route.params as RouteParams
 
   const { navigate } = useNavigation();
 
@@ -74,12 +83,12 @@ export function Food() {
     <Container>
       <Header />
 
-      <TitleAndSubtitle title="lorem ipsum" subtitle="lorem ipsum" />
+      <TitleAndSubtitle title={name} subtitle="Veja aqui a quantidade de alimentos" />
       <SecondTitleContainer>Quantidade</SecondTitleContainer>
 
       <FoodAmountContainer>
         <TextFoodAmount>{foodAmount}</TextFoodAmount>
-        <TextFoodKgsOrUnid>Unid.</TextFoodKgsOrUnid>
+        <TextFoodKgsOrUnid>{measure}.</TextFoodKgsOrUnid>
       </FoodAmountContainer>
 
       <IconButtonAndTextContainer>
