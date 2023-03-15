@@ -15,13 +15,15 @@ export const SecondTitleContainer = styled.Text`
   `}
 
   text-align: center;
-  margin-top: 70px;
+  margin-top: 40px;
+  margin-bottom: 12px;
 `;
 
 export const FoodAmountContainer = styled.View`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 `
 
 export const TextFoodAmount = styled.Text`
@@ -39,6 +41,7 @@ export const TextFoodKgsOrUnid = styled.Text`
     font-family: ${theme.FONT_FAMILY.REGULAR};
   `}
   margin-left: 12px;
+  margin-top: 8px;
 `;
 
 export const ButtonContainer = styled.View`

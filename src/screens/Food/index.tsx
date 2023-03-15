@@ -22,7 +22,7 @@ export function Food() {
   const { navigate } = useNavigation();
 
   function handleAddOneOnFoodAmount() {
-    setFoodAmount((state) => state + 0.5);
+    setFoodAmount((state) => state + 1);
   }
 
   function handleAddHalfOnFoodAmount() {
@@ -34,7 +34,7 @@ export function Food() {
   }
 
   function handleRemoveOneOnFoodAmount() {
-    if (foodAmount <= 1) {
+    if (foodAmount <= 0.9) {
       return Alert.alert(
         "Adicionar e Remover",
         "Não é possível diminuir mais a quantidade do alimento para um número menor que zero"
@@ -83,12 +83,8 @@ export function Food() {
       </FoodAmountContainer>
 
       <IconButtonAndTextContainer>
-      <ButtonIcon
-          icon="add"
-          // style={{ marginRight: 8 }}
-          onPress={handleAddHalfOnFoodAmount}
-        />
-    
+        <ButtonIcon icon="add" onPress={handleAddHalfOnFoodAmount} style={{ marginRight: 10 }}/>
+
         <TextForExplainIconButton>0.5 em 0.5</TextForExplainIconButton>
 
         <ButtonIcon
@@ -99,13 +95,11 @@ export function Food() {
       </IconButtonAndTextContainer>
 
       <IconButtonAndTextContainer>
-      <ButtonIcon
-          icon="add"
-          style={{ marginRight: 12 }}
-          onPress={handleAddOneOnFoodAmount}
-        />
-    
-        <TextForExplainIconButton>1 em 1</TextForExplainIconButton>
+        <ButtonIcon icon="add" onPress={handleAddOneOnFoodAmount} />
+
+        <TextForExplainIconButton style={{ marginLeft: 19, marginRight: 19 }}>
+          1 em 1
+        </TextForExplainIconButton>
 
         <ButtonIcon
           icon="remove"
@@ -114,14 +108,15 @@ export function Food() {
         />
       </IconButtonAndTextContainer>
 
-      <IconButtonAndTextContainer>
-      <ButtonIcon
+      <IconButtonAndTextContainer style={{ paddingBottom: 80 }}>
+        <ButtonIcon
           icon="add"
-          style={{ marginRight: 12 }}
           onPress={handleAddFiveOnFoodAmount}
         />
-    
-        <TextForExplainIconButton>5 em 5</TextForExplainIconButton>
+
+        <TextForExplainIconButton style={{ marginLeft: 19, marginRight: 19 }}>
+          5 em 5
+        </TextForExplainIconButton>
 
         <ButtonIcon
           icon="remove"
@@ -130,7 +125,11 @@ export function Food() {
         />
       </IconButtonAndTextContainer>
       <ButtonContainer>
-        <Button title="Salvar" style={{ marginRight: 16 }} onPress={handleSaveChanges} />
+        <Button
+          title="Salvar"
+          style={{ marginRight: 16 }}
+          onPress={handleSaveChanges}
+        />
         <Button title="Excluir alimento" type="SECONDARY" />
       </ButtonContainer>
     </Container>
