@@ -5,7 +5,7 @@ export declare global {
       register: undefined;
       food: {
         name: string;
-        measurement: string;
+        measure: string;
       };
     }
   }
