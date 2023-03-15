@@ -15,14 +15,13 @@ export const SecondTitleContainer = styled.Text`
   `}
 
   text-align: center;
-  margin-top: 100px;
+  margin-top: 70px;
 `;
 
 export const FoodAmountContainer = styled.View`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-bottom: 200px;
 `
 
 export const TextFoodAmount = styled.Text`
@@ -45,4 +44,18 @@ export const TextFoodKgsOrUnid = styled.Text`
 export const ButtonContainer = styled.View`
   flex-direction: row;
 `;
+
+export const IconButtonAndTextContainer = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`
+
+export const TextForExplainIconButton = styled.Text`
+  ${({ theme }) => css`
+    color: ${theme.COLORS.WHITE};
+    font-size: ${theme.FONT_SIZE.MD}px;
+    font-family: ${theme.FONT_FAMILY.REGULAR};
+  `}
+`
 
