@@ -2,7 +2,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { FOOD_KEY } from "../storageConfig";
 import { getFood } from "./getFood";
 
-export async function groupCreate(food: string) {
+export async function setFood(food: string) {
   try {
     const storedFood = await getFood();
 
