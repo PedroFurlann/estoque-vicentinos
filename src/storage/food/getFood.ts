@@ -1,6 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { FOOD_KEY } from "../storageConfig";
-import { FoodProps } from "./setFood";
+import { FoodProps } from "./setNewFood";
 
 
 export async function getFood() {

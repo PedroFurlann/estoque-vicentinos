@@ -2,11 +2,11 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { FOOD_KEY } from "../storageConfig";
 import { getFood } from "./getFood";
 export interface FoodProps {
-  name: string;
+  food: string;
   measure: string
 }
 
-export async function setFood(nameAndMeasure: FoodProps) {
+export async function setNewFood(nameAndMeasure: FoodProps) {
   try {
     const storedFood = await getFood();
 

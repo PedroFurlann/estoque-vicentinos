@@ -7,7 +7,7 @@ import { FoodCard } from "../../components/FoodCard";
 import { Header } from "../../components/Header";
 import { TitleAndSubtitle } from "../../components/TitleAndSubtitle";
 import { getFood } from "../../storage/food/getFood";
-import { FoodProps } from "../../storage/food/setFood";
+import { FoodProps } from "../../storage/food/setNewFood";
 import { Container } from "./styles";
 
 export function Home() {
@@ -48,11 +48,11 @@ export function Home() {
       />
       <FlatList
         data={foodInfo}
-        keyExtractor={(item) => item.name}
+        keyExtractor={(item) => item.food}
         renderItem={({ item }) => (
           <FoodCard
-            text={item.name}
-            onPress={() => handleGoToFood(item.name, item.measure)}
+            text={item.food}
+            onPress={() => handleGoToFood(item.food, item.measure)}
           />
         )}
         contentContainerStyle={foodInfo.length === 0 && { flex: 1 }}
