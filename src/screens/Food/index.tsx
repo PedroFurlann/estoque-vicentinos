@@ -49,7 +49,7 @@ export function Food() {
     if (foodAmount <= 0.9) {
       return Alert.alert(
         "Diminuir",
-        "Não é possível diminuir mais a quantidade do alimento para um número menor que zero"
+        "Não é possível diminuir a quantidade do alimento para um número menor que 0"
       );
     }
 
@@ -60,7 +60,7 @@ export function Food() {
     if (foodAmount <= 0.4) {
       return Alert.alert(
         "Diminuir",
-        "Não é possível diminuir mais a quantidade do alimento para um número menor que zero"
+        "Não é possível diminuir a quantidade do alimento para um número menor que 0"
       );
     }
 
@@ -71,7 +71,7 @@ export function Food() {
     if (foodAmount <= 4) {
       return Alert.alert(
         "Diminuir",
-        "Não é possível diminuir mais a quantidade do alimento para um número menor que zero"
+        "Não é possível diminuir a quantidade do alimento para um número menor que 0"
       );
     }
 
