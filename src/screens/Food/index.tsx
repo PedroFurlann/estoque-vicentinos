@@ -128,7 +128,7 @@ export function Food() {
     <Container>
       <Header />
 
-      <TitleAndSubtitle title={name} subtitle="Veja aqui a quantidade de alimentos" />
+      <TitleAndSubtitle title={name} subtitle="Veja aqui a quantidade desse alimento" />
       <SecondTitleContainer>Quantidade</SecondTitleContainer>
 
       <FoodAmountContainer>

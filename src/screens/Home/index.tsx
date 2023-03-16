@@ -43,7 +43,7 @@ export function Home() {
     <Container>
       <Header />
       <TitleAndSubtitle
-        title="Alimentos cadastrados"
+        title="Alimentos"
         subtitle="Visualize aqui os alimentos cadastrados"
       />
       <FlatList
