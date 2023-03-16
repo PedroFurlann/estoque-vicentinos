@@ -47,7 +47,7 @@ export function RegisterFood() {
           onChangeText={setFood}
         />
         <Input 
-          placeholder="Digite unidade de medida: (Kg ou Unid)"
+          placeholder="Unidade de medida: (Kg, Unid, Litros, etc...)"
           placeholderTextColor={COLORS.GRAY_300}
           onChangeText={setMeasure}
         />
