@@ -15,8 +15,8 @@ export function Home() {
 
   const { navigate } = useNavigation();
 
-  function handleGoToFood(name: string, measure: string) {
-    navigate("food", { name, measure });
+  function handleGoToFood(food: string, measure: string) {
+    navigate("food", { name: food, measure });
   }
 
   function handleGoToRegisterFood() {
@@ -29,7 +29,7 @@ export function Home() {
       setFoodInfo(data);
     } catch (error) {
       console.log(error);
-      Alert.alert("Alimentos", "Não foi possível carregas os alimentos");
+      Alert.alert("Alimentos", "Não foi possível carregas a lista de alimentos");
     }
   }
 
