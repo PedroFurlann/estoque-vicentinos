@@ -11,7 +11,7 @@ export const MessageContainer = styled.Text`
 
   ${({ theme }) => css`
     font-size: ${theme.FONT_SIZE.SM}px;
-    color: ${theme.COLORS.GRAY_300};
+    color: ${theme.COLORS.WHITE};
     font-family: ${theme.FONT_FAMILY.REGULAR};
   `}
 `;

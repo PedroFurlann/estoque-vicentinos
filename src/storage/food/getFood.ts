@@ -1,12 +1,13 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { FOOD_KEY } from "../storageConfig";
+import { FoodProps } from "./setFood";
 
 
 export async function getFood() {
   try {
     const storage = await AsyncStorage.getItem(FOOD_KEY)
 
-    const groups: string[] = storage ? JSON.parse(storage) : [];
+    const groups: FoodProps[] = storage ? JSON.parse(storage) : [];
 
     return groups;
     

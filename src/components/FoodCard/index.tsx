@@ -5,7 +5,7 @@ interface FoodCardProps extends TouchableOpacityProps {
   text: string;
 }
 
-export function GroupCard({ text, ...props }: FoodCardProps, ){
+export function FoodCard({ text, ...props }: FoodCardProps, ){
   return (
     <Container {...props}>
       <Icon />
