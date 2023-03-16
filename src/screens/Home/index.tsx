@@ -55,14 +55,17 @@ export function Home() {
             onPress={() => handleGoToFood(item.food, item.measure)}
           />
         )}
-        contentContainerStyle={foodInfo.length === 0 && { flex: 1 }}
+        contentContainerStyle={[
+          {paddingBottom: 100},
+          foodInfo.length === 0 && { flex: 1 }
+        ]}
         ListEmptyComponent={() => (
           <EmptyList message="Não possuem alimentos cadastradas! Cadastre o alimento clicando no botão abaixo." />
         )}
         showsVerticalScrollIndicator={false}
       />
 
-      <Button title="Cadastrar Alimento" onPress={handleGoToRegisterFood} />
+      <Button title="Cadastrar Alimento" onPress={handleGoToRegisterFood} style={{marginTop: 24}} />
     </Container>
   );
 }
