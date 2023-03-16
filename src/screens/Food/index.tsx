@@ -1,10 +1,12 @@
-import { useNavigation, useRoute } from "@react-navigation/native";
-import { useState } from "react";
+import { useFocusEffect, useNavigation, useRoute } from "@react-navigation/native";
+import { useCallback, useEffect, useState } from "react";
 import { Alert } from "react-native";
 import { Button } from "../../components/Button";
 import { ButtonIcon } from "../../components/ButtonIcon";
 import { Header } from "../../components/Header";
 import { TitleAndSubtitle } from "../../components/TitleAndSubtitle";
+import { getAmount } from "../../storage/amount/getAmount";
+import { setAmount } from "../../storage/amount/setAmount";
 import { removeFood } from "../../storage/food/removeFood";
 import {
   ButtonContainer,
@@ -87,7 +89,7 @@ export function Food() {
   }
 
   async function handleRemoveFood() {
-    Alert.alert("Remover", `Deseja remover alimento: ${name}?`, [
+    Alert.alert("Remover", `Deseja remover o alimento: ${name}?`, [
       {
         text: "Sim",
         onPress: () => removeFoodCard(),
@@ -100,9 +102,27 @@ export function Food() {
     ]);
   }
 
-  function handleSaveChanges() {
+  async function handleSaveChanges() {
+    await setAmount(foodAmount, name)
+
     navigate("home");
   }
+
+  async function fetchFoodAmount() {
+    try {
+      const amount = await getAmount(name)
+
+      setFoodAmount(amount)
+    } catch (error) {
+      throw new Error(`Não foi possível carregar a quantidade do alimento ${name}`)
+    }
+  }
+
+  useFocusEffect(
+    useCallback(() => {
+      fetchFoodAmount();
+    }, [])
+  );
 
   return (
     <Container>

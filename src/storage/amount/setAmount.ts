@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { AMOUNT_KEY } from "../storageConfig";
 
-export async function playerAddByGroup(amount: number, name: string) {
+export async function setAmount(amount: number, name: string) {
   try {
     const storage = JSON.stringify(amount)
 
