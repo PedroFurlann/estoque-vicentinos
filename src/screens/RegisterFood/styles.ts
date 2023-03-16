@@ -11,6 +11,7 @@ export const Container = styled(SafeAreaView)`
 export const ContentContainer = styled.View`
   flex: 1;
   justify-content: center;
+  margin-top: 100px;
 `;
 
 export const Input = styled.TextInput`

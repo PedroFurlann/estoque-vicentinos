@@ -13,6 +13,10 @@ export function RegisterFood() {
 
   const { navigate } = useNavigation();
 
+  function handleGoToHome() {
+    navigate("home");
+  }
+
   
   async function handleRegisterFood() {
     try {
@@ -52,6 +56,7 @@ export function RegisterFood() {
           onChangeText={setMeasure}
         />
         <Button title="Adicionar Alimento" onPress={handleRegisterFood} />
+        <Button title="Voltar" type="SECONDARY" onPress={handleGoToHome} style={{ marginTop: 16 }} />
       </ContentContainer>
     </Container>
   )
