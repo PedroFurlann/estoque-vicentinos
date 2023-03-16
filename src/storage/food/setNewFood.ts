@@ -10,10 +10,10 @@ export async function setNewFood(nameAndMeasure: FoodProps) {
   try {
     const storedFood = await getFood();
 
-    const foodNameAlreadyTaken = storedFood.includes(nameAndMeasure);
+    const foodNameALreadyTaken = storedFood.filter(item => item.food === nameAndMeasure.food);
 
-    if (foodNameAlreadyTaken) {
-      throw new Error('Já existe um alimento com esse nome!')
+    if (foodNameALreadyTaken.length > 0) {
+      throw new Error('Esse alimeto já existe');
     }
 
     const storage = JSON.stringify([...storedFood, nameAndMeasure]);
@@ -22,6 +22,7 @@ export async function setNewFood(nameAndMeasure: FoodProps) {
 
   } catch (error) {
       throw new Error('Não foi possível cadastrar o alimento')
+      console.log(error)
   }
 
 }

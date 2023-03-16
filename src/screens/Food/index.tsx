@@ -5,6 +5,7 @@ import { Button } from "../../components/Button";
 import { ButtonIcon } from "../../components/ButtonIcon";
 import { Header } from "../../components/Header";
 import { TitleAndSubtitle } from "../../components/TitleAndSubtitle";
+import { removeFood } from "../../storage/food/removeFood";
 import {
   ButtonContainer,
   Container,
@@ -75,6 +76,30 @@ export function Food() {
     setFoodAmount((state) => state - 5);
   }
 
+  async function removeFoodCard() {
+    try {
+      await removeFood(name);
+      navigate("home");
+    } catch (error) {
+      console.log(error);
+      Alert.alert("Remover", "Não foi possível remover o alimento.");
+    }
+  }
+
+  async function handleRemoveFood() {
+    Alert.alert("Remover", `Deseja remover alimento: ${name}?`, [
+      {
+        text: "Sim",
+        onPress: () => removeFoodCard(),
+      },
+
+      {
+        text: "Não",
+        style: "cancel",
+      },
+    ]);
+  }
+
   function handleSaveChanges() {
     navigate("home");
   }
@@ -139,7 +164,7 @@ export function Food() {
           style={{ marginRight: 16 }}
           onPress={handleSaveChanges}
         />
-        <Button title="Excluir alimento" type="SECONDARY" />
+        <Button title="Excluir alimento" type="SECONDARY" onPress={handleRemoveFood} />
       </ButtonContainer>
     </Container>
   );

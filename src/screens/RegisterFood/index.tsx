@@ -28,7 +28,7 @@ export function RegisterFood() {
       navigate("food", { name: food, measure });
     } catch (error) {
       if (error instanceof Error) {
-        Alert.alert("Novo Alimento", "Não foi possível registrar o alimento");
+        Alert.alert("Novo Alimento", "Já existe um alimento com esse nome!");
         console.log(error)
       } 
     }
