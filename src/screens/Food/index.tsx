@@ -88,7 +88,7 @@ export function Food() {
 
       <FoodAmountContainer>
         <TextFoodAmount>{foodAmount}</TextFoodAmount>
-        <TextFoodKgsOrUnid>{measure}.</TextFoodKgsOrUnid>
+        <TextFoodKgsOrUnid>{measure}</TextFoodKgsOrUnid>
       </FoodAmountContainer>
 
       <IconButtonAndTextContainer>
