@@ -48,7 +48,7 @@ export function Food() {
   function handleRemoveOneOnFoodAmount() {
     if (foodAmount <= 0.9) {
       return Alert.alert(
-        "Adicionar e Remover",
+        "Diminuir",
         "Não é possível diminuir mais a quantidade do alimento para um número menor que zero"
       );
     }
@@ -59,7 +59,7 @@ export function Food() {
   function handleRemoveHalfOnFoodAmount() {
     if (foodAmount <= 0.4) {
       return Alert.alert(
-        "Adicionar e Remover",
+        "Diminuir",
         "Não é possível diminuir mais a quantidade do alimento para um número menor que zero"
       );
     }
@@ -70,7 +70,7 @@ export function Food() {
   function handleRemoveFiveOnFoodAmount() {
     if (foodAmount <= 4) {
       return Alert.alert(
-        "Adicionar e Remover",
+        "Diminuir",
         "Não é possível diminuir mais a quantidade do alimento para um número menor que zero"
       );
     }
@@ -84,12 +84,12 @@ export function Food() {
       navigate("home");
     } catch (error) {
       console.log(error);
-      Alert.alert("Remover", "Não foi possível remover o alimento.");
+      Alert.alert("Excluir", "Não foi possível excluir o alimento.");
     }
   }
 
   async function handleRemoveFood() {
-    Alert.alert("Remover", `Deseja remover o alimento: ${name}?`, [
+    Alert.alert("Excluir", `Deseja excluir o alimento: ${name}?`, [
       {
         text: "Sim",
         onPress: () => removeFoodCard(),
