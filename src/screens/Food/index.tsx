@@ -1,9 +1,14 @@
-import { useFocusEffect, useNavigation, useRoute } from "@react-navigation/native";
-import { useCallback, useEffect, useState } from "react";
+import {
+  useFocusEffect,
+  useNavigation,
+  useRoute,
+} from "@react-navigation/native";
+import { useCallback, useState } from "react";
 import { Alert } from "react-native";
 import { Button } from "../../components/Button";
 import { ButtonIcon } from "../../components/ButtonIcon";
 import { Header } from "../../components/Header";
+import { Loading } from "../../components/Loading";
 import { TitleAndSubtitle } from "../../components/TitleAndSubtitle";
 import { getAmount } from "../../storage/amount/getAmount";
 import { setAmount } from "../../storage/amount/setAmount";
@@ -29,7 +34,7 @@ export function Food() {
 
   const route = useRoute();
 
-  const { name, measure } = route.params as RouteParams
+  const { name, measure } = route.params as RouteParams;
 
   const { navigate } = useNavigation();
 
@@ -103,18 +108,19 @@ export function Food() {
   }
 
   async function handleSaveChanges() {
-    await setAmount(foodAmount, name)
+    await setAmount(foodAmount, name);
 
     navigate("home");
   }
 
   async function fetchFoodAmount() {
     try {
-      const amount = await getAmount(name)
-
-      setFoodAmount(amount)
+      const amount = await getAmount(name);
+      setFoodAmount(amount);
     } catch (error) {
-      throw new Error(`Não foi possível carregar a quantidade do alimento ${name}`)
+      throw new Error(
+        `Não foi possível carregar a quantidade do alimento ${name}`
+      );
     }
   }
 
@@ -128,7 +134,10 @@ export function Food() {
     <Container>
       <Header />
 
-      <TitleAndSubtitle title={name} subtitle="Veja aqui a quantidade desse alimento" />
+      <TitleAndSubtitle
+        title={name}
+        subtitle="Veja aqui a quantidade desse alimento"
+      />
       <SecondTitleContainer>Quantidade</SecondTitleContainer>
 
       <FoodAmountContainer>
@@ -137,7 +146,11 @@ export function Food() {
       </FoodAmountContainer>
 
       <IconButtonAndTextContainer>
-        <ButtonIcon icon="add" onPress={handleAddHalfOnFoodAmount} style={{ marginRight: 10 }}/>
+        <ButtonIcon
+          icon="add"
+          onPress={handleAddHalfOnFoodAmount}
+          style={{ marginRight: 10 }}
+        />
 
         <TextForExplainIconButton>0.5 em 0.5</TextForExplainIconButton>
 
@@ -163,10 +176,7 @@ export function Food() {
       </IconButtonAndTextContainer>
 
       <IconButtonAndTextContainer style={{ paddingBottom: 80 }}>
-        <ButtonIcon
-          icon="add"
-          onPress={handleAddFiveOnFoodAmount}
-        />
+        <ButtonIcon icon="add" onPress={handleAddFiveOnFoodAmount} />
 
         <TextForExplainIconButton style={{ marginLeft: 19, marginRight: 19 }}>
           5 em 5
@@ -184,7 +194,11 @@ export function Food() {
           style={{ marginRight: 16 }}
           onPress={handleSaveChanges}
         />
-        <Button title="Excluir alimento" type="SECONDARY" onPress={handleRemoveFood} />
+        <Button
+          title="Excluir alimento"
+          type="SECONDARY"
+          onPress={handleRemoveFood}
+        />
       </ButtonContainer>
     </Container>
   );
