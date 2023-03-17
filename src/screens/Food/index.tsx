@@ -175,7 +175,7 @@ export function Food() {
         />
       </IconButtonAndTextContainer>
 
-      <IconButtonAndTextContainer style={{ paddingBottom: 80 }}>
+      <IconButtonAndTextContainer style={{ paddingBottom: 75 }}>
         <ButtonIcon icon="add" onPress={handleAddFiveOnFoodAmount} />
 
         <TextForExplainIconButton style={{ marginLeft: 19, marginRight: 19 }}>

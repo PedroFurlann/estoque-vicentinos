@@ -52,6 +52,7 @@ export const IconButtonAndTextContainer = styled.View`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex: 1;
 `
 
 export const TextForExplainIconButton = styled.Text`
