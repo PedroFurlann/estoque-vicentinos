@@ -4,8 +4,9 @@ import { Alert } from "react-native";
 import { useTheme } from "styled-components/native";
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
+import { TitleAndSubtitle } from "../../components/TitleAndSubtitle";
 import { setNewFood } from "../../storage/food/setNewFood";
-import { Container, ContentContainer, FoodIcon, Input } from "./styles";
+import { ButtonContainer, Container, ContentContainer, Input } from "./styles";
 
 export function RegisterFood() {
   const [food, setFood] = useState("");
@@ -17,15 +18,20 @@ export function RegisterFood() {
     navigate("home");
   }
 
-  
   async function handleRegisterFood() {
     try {
-      if(food.trim().length === 0) {
-        return Alert.alert('Alimento vazio', 'Por favor, informe o nome do alimento');
+      if (food.trim().length === 0) {
+        return Alert.alert(
+          "Alimento vazio",
+          "Por favor, informe o nome do alimento"
+        );
       }
 
       if (measure.trim().length === 0) {
-        return Alert.alert('Medida vazia', 'Por favor, informe a unidade de medida (Kg ou Unid)')
+        return Alert.alert(
+          "Medida vazia",
+          "Por favor, informe a unidade de medida (Kg ou Unid)"
+        );
       }
 
       await setNewFood({ food, measure });
@@ -33,8 +39,8 @@ export function RegisterFood() {
     } catch (error) {
       if (error instanceof Error) {
         Alert.alert("Novo Alimento", "Já existe um alimento com esse nome!");
-        console.log(error)
-      } 
+        console.log(error);
+      }
     }
   }
 
@@ -43,21 +49,30 @@ export function RegisterFood() {
   return (
     <Container>
       <Header />
+      <TitleAndSubtitle
+        title="Registrar"
+        subtitle="Registre aqui seu alimento"
+      />
       <ContentContainer>
-        <FoodIcon />
         <Input
           placeholder="Nome do alimento"
           placeholderTextColor={COLORS.GRAY_300}
           onChangeText={setFood}
         />
-        <Input 
+        <Input
           placeholder="Unidade de medida: (Kg, Unid, Litros, etc...)"
           placeholderTextColor={COLORS.GRAY_300}
           onChangeText={setMeasure}
         />
-        <Button title="Adicionar Alimento" onPress={handleRegisterFood} />
-        <Button title="Voltar" type="SECONDARY" onPress={handleGoToHome} style={{ marginTop: 16 }} />
       </ContentContainer>
+      <ButtonContainer>
+        <Button
+          title="Registrar Alimento"
+          onPress={handleRegisterFood}
+          style={{ marginRight: 16 }}
+        />
+        <Button title="Voltar" type="SECONDARY" onPress={handleGoToHome} />
+      </ButtonContainer>
     </Container>
-  )
+  );
 }

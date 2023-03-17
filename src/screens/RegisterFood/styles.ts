@@ -1,4 +1,3 @@
-import { Hamburger } from "phosphor-react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import styled, { css } from "styled-components/native";
 
@@ -11,7 +10,7 @@ export const Container = styled(SafeAreaView)`
 export const ContentContainer = styled.View`
   flex: 1;
   justify-content: center;
-  margin-top: 100px;
+  margin-bottom: 22px;
 `;
 
 export const Input = styled.TextInput`
@@ -32,12 +31,8 @@ export const Input = styled.TextInput`
   margin-bottom: 16px;
 `;
 
-export const FoodIcon = styled(Hamburger).attrs(({ theme }) => ({
-  size: 72,
-  color: theme.COLORS.GRAY_700,
-  weight: "bold"
-}))
+export const ButtonContainer = styled.View`
+  flex-direction: row;
 `
-  align-self: center;
-  margin-bottom: 16px;
-`;
+
+
