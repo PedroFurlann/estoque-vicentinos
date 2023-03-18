@@ -52,7 +52,6 @@ export const IconButtonAndTextContainer = styled.View`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex: 1;
 `
 
 export const TextForExplainIconButton = styled.Text`
@@ -61,5 +60,9 @@ export const TextForExplainIconButton = styled.Text`
     font-size: ${theme.FONT_SIZE.MD}px;
     font-family: ${theme.FONT_FAMILY.REGULAR};
   `}
+`
+
+export const ButtonAddOrRemoveContainer = styled.View`
+  flex: 1;
 `
 

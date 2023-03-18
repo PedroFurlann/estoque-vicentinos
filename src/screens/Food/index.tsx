@@ -14,6 +14,7 @@ import { getAmount } from "../../storage/amount/getAmount";
 import { setAmount } from "../../storage/amount/setAmount";
 import { removeFood } from "../../storage/food/removeFood";
 import {
+  ButtonAddOrRemoveContainer,
   ButtonContainer,
   Container,
   FoodAmountContainer,
@@ -145,49 +146,44 @@ export function Food() {
         <TextFoodKgsOrUnid>{measure}</TextFoodKgsOrUnid>
       </FoodAmountContainer>
 
-      <IconButtonAndTextContainer>
-        <ButtonIcon
-          icon="add"
-          onPress={handleAddHalfOnFoodAmount}
-          style={{ marginRight: 10 }}
-        />
+      <ButtonAddOrRemoveContainer>
+        <IconButtonAndTextContainer>
+          <ButtonIcon
+            icon="add"
+            onPress={handleAddHalfOnFoodAmount}
+            style={{ marginRight: 10 }}
+          />
+          <TextForExplainIconButton>0.5 em 0.5</TextForExplainIconButton>
+          <ButtonIcon
+            icon="remove"
+            type="SECONDARY"
+            onPress={handleRemoveHalfOnFoodAmount}
+          />
+        </IconButtonAndTextContainer>
+        <IconButtonAndTextContainer>
+          <ButtonIcon icon="add" onPress={handleAddOneOnFoodAmount} />
+          <TextForExplainIconButton style={{ marginLeft: 19, marginRight: 19 }}>
+            1 em 1
+          </TextForExplainIconButton>
+          <ButtonIcon
+            icon="remove"
+            type="SECONDARY"
+            onPress={handleRemoveOneOnFoodAmount}
+          />
+        </IconButtonAndTextContainer>
+        <IconButtonAndTextContainer style={{ paddingBottom: 75 }}>
+          <ButtonIcon icon="add" onPress={handleAddFiveOnFoodAmount} />
+          <TextForExplainIconButton style={{ marginLeft: 19, marginRight: 19 }}>
+            5 em 5
+          </TextForExplainIconButton>
 
-        <TextForExplainIconButton>0.5 em 0.5</TextForExplainIconButton>
-
-        <ButtonIcon
-          icon="remove"
-          type="SECONDARY"
-          onPress={handleRemoveHalfOnFoodAmount}
-        />
-      </IconButtonAndTextContainer>
-
-      <IconButtonAndTextContainer>
-        <ButtonIcon icon="add" onPress={handleAddOneOnFoodAmount} />
-
-        <TextForExplainIconButton style={{ marginLeft: 19, marginRight: 19 }}>
-          1 em 1
-        </TextForExplainIconButton>
-
-        <ButtonIcon
-          icon="remove"
-          type="SECONDARY"
-          onPress={handleRemoveOneOnFoodAmount}
-        />
-      </IconButtonAndTextContainer>
-
-      <IconButtonAndTextContainer style={{ paddingBottom: 75 }}>
-        <ButtonIcon icon="add" onPress={handleAddFiveOnFoodAmount} />
-
-        <TextForExplainIconButton style={{ marginLeft: 19, marginRight: 19 }}>
-          5 em 5
-        </TextForExplainIconButton>
-
-        <ButtonIcon
-          icon="remove"
-          type="SECONDARY"
-          onPress={handleRemoveFiveOnFoodAmount}
-        />
-      </IconButtonAndTextContainer>
+          <ButtonIcon
+            icon="remove"
+            type="SECONDARY"
+            onPress={handleRemoveFiveOnFoodAmount}
+          />
+        </IconButtonAndTextContainer>
+      </ButtonAddOrRemoveContainer>
       <ButtonContainer>
         <Button
           title="Salvar"
