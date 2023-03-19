@@ -8,15 +8,14 @@ import { Alert } from "react-native";
 import { Button } from "../../components/Button";
 import { ButtonIcon } from "../../components/ButtonIcon";
 import { Header } from "../../components/Header";
-import { Loading } from "../../components/Loading";
 import { TitleAndSubtitle } from "../../components/TitleAndSubtitle";
 import { getAmount } from "../../storage/amount/getAmount";
 import { setAmount } from "../../storage/amount/setAmount";
 import { removeFood } from "../../storage/food/removeFood";
 import {
-  ButtonAddOrRemoveContainer,
   ButtonContainer,
   Container,
+  ContentContainer,
   FoodAmountContainer,
   IconButtonAndTextContainer,
   SecondTitleContainer,
@@ -141,49 +140,47 @@ export function Food() {
       />
       <SecondTitleContainer>Quantidade</SecondTitleContainer>
 
-      <FoodAmountContainer>
-        <TextFoodAmount>{foodAmount}</TextFoodAmount>
-        <TextFoodKgsOrUnid>{measure}</TextFoodKgsOrUnid>
-      </FoodAmountContainer>
-
-      <ButtonAddOrRemoveContainer>
-        <IconButtonAndTextContainer>
-          <ButtonIcon
-            icon="add"
-            onPress={handleAddHalfOnFoodAmount}
-            style={{ marginRight: 10 }}
-          />
-          <TextForExplainIconButton>0.5 em 0.5</TextForExplainIconButton>
-          <ButtonIcon
-            icon="remove"
-            type="SECONDARY"
-            onPress={handleRemoveHalfOnFoodAmount}
-          />
-        </IconButtonAndTextContainer>
-        <IconButtonAndTextContainer>
-          <ButtonIcon icon="add" onPress={handleAddOneOnFoodAmount} />
-          <TextForExplainIconButton style={{ marginLeft: 19, marginRight: 19 }}>
-            1 em 1
-          </TextForExplainIconButton>
-          <ButtonIcon
-            icon="remove"
-            type="SECONDARY"
-            onPress={handleRemoveOneOnFoodAmount}
-          />
-        </IconButtonAndTextContainer>
-        <IconButtonAndTextContainer style={{ paddingBottom: 75 }}>
-          <ButtonIcon icon="add" onPress={handleAddFiveOnFoodAmount} />
-          <TextForExplainIconButton style={{ marginLeft: 19, marginRight: 19 }}>
-            5 em 5
-          </TextForExplainIconButton>
-
-          <ButtonIcon
-            icon="remove"
-            type="SECONDARY"
-            onPress={handleRemoveFiveOnFoodAmount}
-          />
-        </IconButtonAndTextContainer>
-      </ButtonAddOrRemoveContainer>
+      <ContentContainer>
+        <FoodAmountContainer>
+          <TextFoodAmount>{foodAmount}</TextFoodAmount>
+          <TextFoodKgsOrUnid>{measure}</TextFoodKgsOrUnid>
+        </FoodAmountContainer>
+          <IconButtonAndTextContainer>
+            <ButtonIcon
+              icon="add"
+              onPress={handleAddHalfOnFoodAmount}
+              style={{ marginRight: 10 }}
+            />
+            <TextForExplainIconButton>0.5 em 0.5</TextForExplainIconButton>
+            <ButtonIcon
+              icon="remove"
+              type="SECONDARY"
+              onPress={handleRemoveHalfOnFoodAmount}
+            />
+          </IconButtonAndTextContainer>
+          <IconButtonAndTextContainer>
+            <ButtonIcon icon="add" onPress={handleAddOneOnFoodAmount} />
+            <TextForExplainIconButton style={{ marginLeft: 19, marginRight: 19 }}>
+              1 em 1
+            </TextForExplainIconButton>
+            <ButtonIcon
+              icon="remove"
+              type="SECONDARY"
+              onPress={handleRemoveOneOnFoodAmount}
+            />
+          </IconButtonAndTextContainer>
+          <IconButtonAndTextContainer style={{ paddingBottom: 75 }}>
+            <ButtonIcon icon="add" onPress={handleAddFiveOnFoodAmount} />
+            <TextForExplainIconButton style={{ marginLeft: 19, marginRight: 19 }}>
+              5 em 5
+            </TextForExplainIconButton>
+            <ButtonIcon
+              icon="remove"
+              type="SECONDARY"
+              onPress={handleRemoveFiveOnFoodAmount}
+            />
+          </IconButtonAndTextContainer>
+      </ContentContainer>
       <ButtonContainer>
         <Button
           title="Salvar"

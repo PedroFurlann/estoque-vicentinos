@@ -62,7 +62,7 @@ export const TextForExplainIconButton = styled.Text`
   `}
 `
 
-export const ButtonAddOrRemoveContainer = styled.View`
+export const ContentContainer = styled.View`
   flex: 1;
 `
 
