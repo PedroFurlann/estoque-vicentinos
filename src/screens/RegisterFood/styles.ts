@@ -14,8 +14,6 @@ export const ContentContainer = styled.View`
 `;
 
 export const Input = styled.TextInput`
-  flex: 1;
-
   min-height: 56px;
   max-height: 56px;
 
