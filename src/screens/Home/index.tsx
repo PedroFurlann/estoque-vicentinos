@@ -71,7 +71,7 @@ export function Home() {
             foodInfo.length === 0 && { flex: 1 },
           ]}
           ListEmptyComponent={() => (
-            <EmptyList message="Não possuem alimentos cadastradas! Cadastre o alimento clicando no botão abaixo." />
+            <EmptyList message="Não possuem alimentos cadastrados! Cadastre o alimento clicando no botão abaixo." />
           )}
           showsVerticalScrollIndicator={false}
         />
