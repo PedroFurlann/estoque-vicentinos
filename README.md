@@ -79,7 +79,3 @@ $ expo start
   <img src="https://raw.githubusercontent.com/PedroFurlann/estoque-vicentinos/main/src/assets/estoque4.png" />
 
   <img src="https://raw.githubusercontent.com/PedroFurlann/estoque-vicentinos/main/src/assets/estoque5.png" />
-
-  <img src="https://raw.githubusercontent.com/PedroFurlann/ignite-teams/main/src/assets/teams6.png" />
-
-  <img src="https://raw.githubusercontent.com/PedroFurlann/ignite-teams/main/src/assets/teams7.png" />
