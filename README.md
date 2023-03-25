@@ -70,15 +70,15 @@ $ expo start
 
 ### Imagens do Aplicativo / App Images :camera:
 
-  <img src="https://raw.githubusercontent.com/PedroFurlann/ignite-teams/main/src/assets/teams1.png" />
+  <img src="https://raw.githubusercontent.com/PedroFurlann/estoque-vicentinos/main/src/assets/estoque1.png" />
 
-  <img src="https://raw.githubusercontent.com/PedroFurlann/ignite-teams/main/src/assets/teams2.png" />
+  <img src="https://raw.githubusercontent.com/PedroFurlann/estoque-vicentinos/main/src/assets/estoque2.png" />
 
-  <img src="https://raw.githubusercontent.com/PedroFurlann/ignite-teams/main/src/assets/teams3.png" />
+  <img src="https://raw.githubusercontent.com/PedroFurlann/estoque-vicentinos/main/src/assets/estoque3.png" />
 
-  <img src="https://raw.githubusercontent.com/PedroFurlann/ignite-teams/main/src/assets/teams4.png" />
+  <img src="https://raw.githubusercontent.com/PedroFurlann/estoque-vicentinos/main/src/assets/estoque4.png" />
 
-  <img src="https://raw.githubusercontent.com/PedroFurlann/ignite-teams/main/src/assets/teams5.png" />
+  <img src="https://raw.githubusercontent.com/PedroFurlann/estoque-vicentinos/main/src/assets/estoque5.png" />
 
   <img src="https://raw.githubusercontent.com/PedroFurlann/ignite-teams/main/src/assets/teams6.png" />
 
