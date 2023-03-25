@@ -1,4 +1,4 @@
-# Estoque Vicentinos :cut_of_meat: :soccer: 
+# Estoque Vicentinos :cut_of_meat:  
 
 ## (PT-BR) 
 
