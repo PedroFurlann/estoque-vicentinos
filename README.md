@@ -68,7 +68,7 @@ $ expo start
 
 ```
 
-### Imagens do Aplicativo / App Images :camera:
+### Imagens do Aplicativo / App Images :camera
 
   <img src="https://raw.githubusercontent.com/PedroFurlann/estoque-vicentinos/main/src/assets/estoque1.png" />
 
