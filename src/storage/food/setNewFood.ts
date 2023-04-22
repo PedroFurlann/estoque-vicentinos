@@ -21,8 +21,8 @@ export async function setNewFood(nameAndMeasure: FoodProps) {
     await AsyncStorage.setItem(FOOD_KEY, storage);
 
   } catch (error) {
-      throw new Error('Não foi possível cadastrar o alimento')
-      console.log(error)
+    console.log(error)
+    throw new Error('Não foi possível cadastrar o alimento')
   }
 
 }
