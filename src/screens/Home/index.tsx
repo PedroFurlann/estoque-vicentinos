@@ -14,7 +14,7 @@ import { Container } from "./styles";
 export function Home() {
   const [foodInfo, setFoodInfo] = useState<FoodProps[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-
+  
   const { navigate } = useNavigation();
 
   function handleGoToFood(food: string, measure: string) {
